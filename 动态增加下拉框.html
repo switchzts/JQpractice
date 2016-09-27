@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>动态增加下拉框</title>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var i=1;
+            $("#editlink").click(function(){
+                    $("#selectlink").append( "<option value=\"1\">新增选项"+i+"</option>" );
+        			i++;
+            });
+        });
+    </script>
+<input type="button" id="editlink" value="add options" />
+<div id="editlinkdiv">
+    <select id="selectlink" name="selectlink">
+        <option>add options</option>
+    </select>
+</div>

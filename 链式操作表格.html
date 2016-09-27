@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>StripingTable</title>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+        $(".stripe tr").mouseover(function(){$(this).addClass("over");})
+        .mouseout(function(){$(this).removeClass("over");})
+        .click(function(){ $(this).toggleClass("click").removeClass("alt")})
+        $(".stripe tr:even").addClass("alt");
+});
+</script>
+<style>
+th {
+        background:#0066FF;
+        color:#FFFFFF;
+        line-height:20px;
+        height:30px;
+}
+ 
+td {
+        padding:6px 11px;
+        border-bottom:1px solid #95bce2;
+        vertical-align:top;
+        text-align:center;
+}
+ 
+td * {
+        padding:6px 11px;
+}
+
+
+ 
+tr.alt td {
+        background:#ecf6fc;  
+}
+ 
+tr.over td {
+        background:#bcd4ec;  
+}
+
+.click{background:yellow;}
+
+ 
+</style>
+</head>
+ 
+<body>
+<table class="stripe" width="50%" border="0" cellspacing="0" cellpadding="0">
+<thead>
+  <tr>
+    <th>123</th>
+    <th>123</th>
+    <th>312/th>
+    <th>312</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href="http://www.cssrain.cn" >Cssrain</a></td>
+    <td>1111</td>
+    <td>2222</td>
+    <td>3333</td>
+  </tr>
+  <tr>
+    <td>123</td>
+    <td>123</td>
+    <td>31540205</td>
+    <td>152342l.com</td>
+  </tr>
+  <tr>
+    <td>23432</td>
+    <td>23</td>
+    <td>31540205</td>
+    <td>gl234324gma23234234</td>
+  </tr>
+  <tr>
+    <td>234235</td>
+    <td>23</td>
+    <td>31540205</td>
+    <td>gl235243om</td>
+  </tr>
+  <tr>
+    <td>235235</td>
+    <td>23</td>
+    <td>31540205</td>
+    <td>g235235om</td>
+  </tr>
+  <tr>
+    <td>µ213213</td>
+    <td>23</td>
+    <td>31540205</td>
+    <td>235324</td>
+  </tr>
+</tbody>
+</table>
+
+</body>
+</html>

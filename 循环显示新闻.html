@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>循环显示新闻</title>
+  <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+  <script type = "text/javascript">
+    function scroll_news(){
+        var firstNode = $('#scroll-container li');
+        firstNode.eq(0).fadeOut('slow',function(){ 
+         $(this).appendTo($(this).parent()).show('slow'); 
+      });
+    }
+    setInterval('scroll_news()',500);//Ã¿¸ô0.5Ãë£¬Ö´ÐÐscroll_news()
+</script>
+</head>
+<body onload="">
+<div id="scroll-container" style="height: 18px;width:200px; background-color: #99CCFF; overflow: hidden; list-style: none;">
+  <li>1111111111111111111</li>
+  <li>2222222222222222222</li>
+  <li>333333333333333333333</li>
+  <li>44444444444444 </li>
+  <li>55555555555555555555555</li>
+</div>
+</body>
+</html>

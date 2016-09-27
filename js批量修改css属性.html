@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>css函数——设置/读取对象的属性</title>
+<style>
+div{width:400px;height:200px;background:#fef4eb;border:1px solid #f60;margin:0 auto;}
+input{border:0;color:#fff;cursor:pointer;font-weight:700;background:#f60;padding:2px 4px;margin:10px 0 0 10px;}
+</style>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+    	$('#box :button').eq(0).on("click",function(){
+    		alert("width:" + $('#box').css('width') + "\nheight:" + $('#box').css('height') + "\nbackground-color:" + $('#box').css('backgroundColor'))
+    	})
+    	$('#box :button').eq(1).on("click",function(){
+    		$('#box').css({"width": "330px", "height": "100px", "borderColor": "#0084ff", "backgroundColor": "#eff8ff"});
+    		$('#box :button').css("backgroundColor","#0084ff");
+    	})
+    	$('#box :button').eq(2).on("click",function(){
+    		$('#box').css({"width": "400px", "height": "200px", "borderColor": "#f60", "backgroundColor": "#fef4eb"});
+    		$('#box :button').css("backgroundColor","#f60");
+    	})
+    });
+</script>
+</head>
+<body>
+<div id="box" style="width: 400px; height: 200px; border-color: rgb(255, 102, 0); background-color: rgb(254, 244, 235);">
+    <input type="button" value="Get Style" style="background-color: rgb(255, 102, 0);">
+    <input type="button" value="Set Style" style="background-color: rgb(255, 102, 0);">
+    <input type="button" value="Default Style" style="background-color: rgb(255, 102, 0);">
+</div>
+</body></html>
